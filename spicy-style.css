@@ -7,7 +7,7 @@ body {
     text-align: center;
     padding: 50px;
     position: relative;
-    overflow: hidden;
+   
 }
 
 /* Multiple Flame Effect */
@@ -17,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    pointer-events: none;
     z-index: -1;
 }
 

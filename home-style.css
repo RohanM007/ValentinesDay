@@ -86,4 +86,27 @@ button:hover {
     }
 }
 
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially Hide All Elements */
+.hidden {
+    opacity: 0;
+}
+
+/* Styling for Delayed Elements */
+h1, button, a {
+    transition: opacity 1s ease-in-out;
+}
+
+
 

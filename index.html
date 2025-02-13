@@ -8,18 +8,25 @@
 </head>
 <body>
 
-    <!-- Floating Hearts -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            for (let i = 0; i < 20; i++) {
-                let heart = document.createElement("div");
-                heart.className = "heart";
-                heart.style.left = Math.random() * 100 + "vw";
-                heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-                document.body.appendChild(heart);
-            }
-        });
+    <!-- Heading 1 (Appears First) -->
+    <h1 id="question1" class="hidden">To my princess, I have an important question.... 💘</h1>
 
+    <!-- Heading 2 (Appears After Delay) -->
+    <h1 id="question2" class="hidden">Will you be my Valentine?</h1>
+
+    <!-- Yes & No Buttons (Appear Last) -->
+    <button id="yesBtn" class="hidden" onclick="explodeHeart('yes')">Yes 💖</button>
+    <button id="noBtn" class="hidden" onclick="explodeHeart('no')">No 💔</button>
+
+    <p id="explosionText" class="explosion"></p>
+
+    <!-- Other Page Links (Appear Last) -->
+    <br><br>
+    <a href="reasons.html"><button id="reasonsBtn" class="hidden">Reasons I Love You</button></a> 
+    <a href="story.html"><button id="storyBtn" class="hidden">Our Story</button></a>
+    <a href="spicy.html"><button id="spicyBtn" class="hidden">Our Spice</button></a> 
+
+    <script>
         function explodeHeart(choice) {
             let text = document.getElementById("explosionText");
 
@@ -29,30 +36,51 @@
                 text.innerHTML = "Too late, you're already mine! 😘";
             }
 
-            // Show the message with a fade-in effect
             text.style.opacity = "1";
             text.style.transform = "scale(1)";
             text.style.animation = "fadeIn 1s ease-in-out forwards";
 
-            // Ensure the message stays visible for longer
             setTimeout(() => {
                 text.style.animation = "fadeOut 2s ease-in-out forwards";
-            }, 4000); // Keep the message for 4 seconds before fading out
+            }, 4000);
         }
+
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            // Show first question after 1 second
+            setTimeout(() => {
+                document.getElementById("question1").classList.remove("hidden");
+                document.getElementById("question1").style.animation = "fadeIn 1s forwards";
+            }, 1000);
+
+            // Show second question after 3 seconds
+            setTimeout(() => {
+                document.getElementById("question2").classList.remove("hidden");
+                document.getElementById("question2").style.animation = "fadeIn 1s forwards";
+            }, 3000);
+
+            // Show Yes/No buttons after 5 seconds
+            setTimeout(() => {
+                document.getElementById("yesBtn").classList.remove("hidden");
+                document.getElementById("yesBtn").style.animation = "fadeIn 1s forwards";
+
+                document.getElementById("noBtn").classList.remove("hidden");
+                document.getElementById("noBtn").style.animation = "fadeIn 1s forwards";
+            }, 5000);
+
+            // Show other buttons after 7 seconds
+            setTimeout(() => {
+                document.getElementById("reasonsBtn").classList.remove("hidden");
+                document.getElementById("reasonsBtn").style.animation = "fadeIn 1s forwards";
+
+                document.getElementById("storyBtn").classList.remove("hidden");
+                document.getElementById("storyBtn").style.animation = "fadeIn 1s forwards";
+
+                document.getElementById("spicyBtn").classList.remove("hidden");
+                document.getElementById("spicyBtn").style.animation = "fadeIn 1s forwards";
+            }, 7000);
+        });
     </script>
-
-    <h1>To my love, will you be my Valentine? 💘</h1>
-
-    <button onclick="explodeHeart('yes')">Yes 💖</button>
-    <button onclick="explodeHeart('no')">No 💔</button>
-
-    <p id="explosionText" class="explosion"></p>
-
-    <!-- Link to Other Pages -->
-    <br><br>
-    <a href="reasons.html"><button>Reasons I Love You</button></a> 
-    <a href="story.html"><button>Our Story</button></a>
-    <a href="spicy.html"><button>Our Spice</button></a> 
 
 </body>
 </html>
