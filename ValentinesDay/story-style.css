@@ -1,0 +1,87 @@
+/* Import a romantic font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+/* General Page Styling */
+body {
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 50px 20px;
+}
+
+/* Title Styling */
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: auto;
+}
+
+li {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styling */
+button {
+    background: #ff5e78;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(255, 94, 120, 0.5);
+}
+
+button:hover {
+    background: #ff85a2;
+    transform: scale(1.1);
+}
+
+/* Floating Hearts Animation */
+@keyframes floating-hearts {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+li:nth-child(even) {
+    animation: floating-hearts 3s infinite ease-in-out;
+}
