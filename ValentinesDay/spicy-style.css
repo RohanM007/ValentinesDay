@@ -46,7 +46,7 @@ h1 {
 }
 
 p {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.5;
     max-width: 700px;
     margin: 20px auto;
@@ -61,7 +61,7 @@ p {
 }
 
 button {
-    font-size: 20px;
+    font-size: 18px;
     background: linear-gradient(45deg, #990000, #cc0000);
     color: white;
     border: none;
